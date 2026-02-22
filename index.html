@@ -23,17 +23,8 @@
         /* Improved mobile text handling */
         .break-long {
             overflow-wrap: break-word;
-            word-wrap: break-word;
+            word-break: break-all;
             hyphens: auto;
-            /* Removed word-break: break-all; to prevent mid-word splitting */
-        }
-
-        /* Specific override for footer disclaimer to keep words whole */
-        .footer-disclaimer {
-            overflow-wrap: break-word;
-            hyphens: auto;
-            word-break: normal;           /* Prevents breaking inside words */
-            text-wrap: pretty;            /* Optional: helps avoid awkward line endings */
         }
 
         /* Make hero buttons responsive on small screens */
@@ -289,7 +280,7 @@
 
                 <div class="bg-white p-8 rounded-3xl shadow border border-red-100">
                     <h3 class="text-3xl font-semibold mb-4 text-red-700">Do I need to enroll if I'm still working with employer coverage?</h3>
-                    <p class="text-xl text-slate-600">It depends. If your employer has 20+ employees and offers creditable group health coverage (comparable to Medicare), you can usually delay Part B (and Part D) without penalties. Part A is often free and worth enrolling in. Confirm with HR, and consider enrolling in Part A anyway. Delaying incorrectly can lead to gaps or penalties later.</p>
+                    <p class="text-xl text-slate-600">It depends. If your employer has 20+ employees and offers creditable group health coverage (comparable to Medicare), you can usually delay Part B (and Part D) without penalties. If you are covered under an employer sponsored group heatlh plan (especially one that's a high-deductable health plan or a HDHP, paired with an HSA), specifically to continue making contributions to your HSA.</p>
                 </div>
 
                 <div class="bg-white p-8 rounded-3xl shadow border border-red-100">
@@ -360,7 +351,7 @@
                 <img src="https://img1.wsimg.com/isteam/ip/05414050-34ba-49f8-b74d-6ec5a8da0bef/YouFirst-NewLogo.png/:/rs=w:200,h:200,cg:true,m/cr=w:200,h:200/qt=q:100/ll"
                      alt="You First Medicare Logo" class="h-16 w-auto mx-auto md:mx-0">
 
-                <div class="text-center md:text-left text-lg leading-relaxed">
+                <div class="text-center md:text-left text-lg leading-relaxed break-long">
                     Stacia Huyler • Independent Medicare Advisor<br>
                     Office Location:<br>
                     750 Boston Neck Rd<br>
@@ -368,7 +359,7 @@
                     (By appointment only)
                 </div>
 
-                <div class="text-sm max-w-md md:max-w-xs lg:max-w-md text-center md:text-right leading-relaxed footer-disclaimer">
+                <div class="text-sm max-w-md md:max-w-xs lg:max-w-md text-center md:text-right leading-relaxed break-long opacity-90">
                     I do not offer every plan available in your area. I am licensed and certified to offer you Medicare Advantage(Part C) , Medigap (supplement) & Part D (Drug) Plans in the states of RI, CT, MA, SC & FL with multiple carriers/organizations and their respective plans.
                     Please visit Medicare.gov or call 1-800-MEDICARE for all options.<br><br>
                     © 2026 You First Medicare • Not affiliated with any government agency
