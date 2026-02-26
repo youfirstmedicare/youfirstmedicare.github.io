@@ -19,14 +19,11 @@
         .nav-link { transition: all 0.3s; }
         .nav-link:hover { color: #dc2626; transform: translateY(-2px); }
         body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-
-        /* Improved mobile text handling */
+        /* Improved mobile text handling - Option 1 */
         .break-long {
-            overflow-wrap: break-word;
-            word-break: break-all;
+            overflow-wrap: anywhere;
             hyphens: auto;
         }
-
         /* Make hero buttons responsive on small screens */
         @media (max-width: 640px) {
             .hero-btn {
@@ -45,7 +42,6 @@
                 font-size: 1.125rem !important;
             }
         }
-
         /* Slightly smaller headings on very small screens */
         @media (max-width: 480px) {
             h1 { font-size: 2.75rem !important; }
@@ -54,21 +50,19 @@
             .text-4xl { font-size: 2rem !important; }
             .text-5xl { font-size: 2.5rem !important; }
         }
-
         /* Dynamic viewport fallback for older browsers */
         @supports (height: 100dvh) {
             .hero-dynamic { height: 100dvh; }
         }
         @supports not (height: 100dvh) {
-            .hero-dynamic { 
-                height: 100vh; 
-                min-height: -webkit-fill-available; 
+            .hero-dynamic {
+                height: 100vh;
+                min-height: -webkit-fill-available;
             }
         }
     </style>
 </head>
 <body class="text-slate-800 text-lg leading-relaxed overflow-x-hidden">
-
     <!-- NAVBAR -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
@@ -101,7 +95,6 @@
             </div>
         </div>
     </nav>
-
     <!-- HERO -->
     <header class="hero-bg hero-dynamic flex items-center text-white">
         <div class="max-w-4xl mx-auto px-6 w-full flex flex-col justify-between min-h-[80%] text-center">
@@ -109,7 +102,6 @@
                 <img src="https://img1.wsimg.com/isteam/ip/05414050-34ba-49f8-b74d-6ec5a8da0bef/YouFirst-NewLogo.png/:/rs=w:200,h:200,cg:true,m/cr=w:200,h:200/qt=q:100/ll"
                      alt="You First Medicare"
                      class="mx-auto hero-logo h-24 sm:h-28 md:h-40 lg:h-48 w-auto drop-shadow-2xl mb-6 md:mb-8">
-
                 <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-6 md:mb-8">
                     Medicare Planning That Puts <span class="text-red-400">YOU FIRST</span>
                 </h1>
@@ -135,11 +127,9 @@
                     </a>
                 </div>
             </div>
-
             <p class="mt-8 sm:mt-12 text-lg sm:text-xl opacity-90 serving-text">Serving RI • CT • MA • SC • FL</p>
         </div>
     </header>
-
     <!-- ABOUT -->
     <section id="about" class="py-24 bg-slate-50">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
@@ -165,7 +155,6 @@
             </div>
         </div>
     </section>
-
     <!-- SERVICES -->
     <section id="services" class="py-24">
         <div class="max-w-6xl mx-auto px-6">
@@ -200,7 +189,6 @@
             </div>
         </div>
     </section>
-
     <!-- WHY US -->
     <section id="why" class="py-24 bg-red-50">
         <div class="max-w-5xl mx-auto px-6">
@@ -262,7 +250,6 @@
             </div>
         </div>
     </section>
-
     <!-- FAQ -->
     <section id="faq" class="py-24 bg-slate-50">
         <div class="max-w-5xl mx-auto px-6">
@@ -272,23 +259,20 @@
                     <h3 class="text-3xl font-semibold mb-4 text-red-700">When do I become eligible for Medicare, and when should I start planning?</h3>
                     <p class="text-xl text-slate-600">Most people become eligible at age 65. Your Initial Enrollment Period (IEP) starts 3 months before the month you turn 65, includes your birthday month, and ends 3 months after. Start reviewing options 3–6 months before your IEP to avoid rush decisions and potential penalties. Coverage usually begins the month you turn 65 if you enroll early in your IEP.</p>
                 </div>
-
                 <div class="bg-white p-8 rounded-3xl shadow border border-red-100">
                     <h3 class="text-3xl font-semibold mb-4 text-red-700">Will I be automatically enrolled in Medicare when I turn 65?</h3>
                     <p class="text-xl text-slate-600">Yes, if you're already receiving Social Security or Railroad Retirement benefits—you'll typically get auto-enrolled in Part A and Part B, with your Medicare card arriving about 3 months before your 65th birthday. If not (e.g., delaying Social Security), you must sign up actively via Social Security (online at ssa.gov, by phone, or in person).</p>
                 </div>
-
                 <div class="bg-white p-8 rounded-3xl shadow border border-red-100">
                     <h3 class="text-3xl font-semibold mb-4 text-red-700">When should I enroll in Medicare Parts A and B if I already have employer group health coverage?</h3>
                     <p class="text-xl text-slate-600">
                         - <strong>Employer with 20+ employees</strong>: Group plan pays primary. You can usually <strong>delay Part B</strong> (no late penalty) while covered. Enroll in <strong>premium-free Part A</strong> when eligible for extra protection.<br><br>
                         - <strong>Employer with fewer than 20 employees</strong>: Medicare pays primary. Enroll in <strong>both Part A and Part B</strong> when first eligible (around age 65) to avoid gaps.<br><br>
-						Generally, you should not sign up for Medicare part A if you are actively contrbuting to (or your employer is contributing to) a Health Savings Account (HSA).<br><br>
+                        Generally, you should not sign up for Medicare part A if you are actively contributing to (or your employer is contributing to) a Health Savings Account (HSA).<br><br>
                         Check with your employer's benefits team for your plan's rules. If delaying Part B, enroll later penalty-free during your Special Enrollment Period (up to 8 months after coverage/employment ends).<br><br>
-						Employer-sponsored plans often involve higher premiums, deductibles, and out-of-pocket costs compared to many Medicare Advantage plans, which frequently feature $0 or very low additonal premiums.
+                        Employer-sponsored plans often involve higher premiums, deductibles, and out-of-pocket costs compared to many Medicare Advantage plans, which frequently feature $0 or very low additional premiums.
                     </p>
                 </div>
-
                 <div class="bg-white p-8 rounded-3xl shadow border border-red-100">
                     <h3 class="text-3xl font-semibold mb-4 text-red-700">What are the main parts of Medicare and what do they cover?</h3>
                     <p class="text-xl text-slate-600">
@@ -299,17 +283,14 @@
                         Add Medigap (supplement) to Original Medicare (A + B) for extra out-of-pocket protection.
                     </p>
                 </div>
-
                 <div class="bg-white p-8 rounded-3xl shadow border border-red-100">
                     <h3 class="text-3xl font-semibold mb-4 text-red-700">Should I choose Original Medicare or Medicare Advantage?</h3>
                     <p class="text-xl text-slate-600">Original Medicare + Medigap offers nationwide doctor flexibility and predictable costs with a supplement. Medicare Advantage often has lower premiums and extras (dental, vision, hearing), but may limit networks and involve more approvals. As an independent advisor, I compare both based on your doctors, prescriptions, budget, and preferences—no bias toward one type.</p>
                 </div>
-
                 <div class="bg-white p-8 rounded-3xl shadow border border-red-100">
                     <h3 class="text-3xl font-semibold mb-4 text-red-700">Do I need Part D prescription coverage right away?</h3>
                     <p class="text-xl text-slate-600">If you lack creditable prescription coverage (e.g., from an employer), enroll during your IEP to avoid the late enrollment penalty (it adds up lifelong). Even with few meds now, future needs can change—coverage protects against high costs and provides peace of mind.</p>
                 </div>
-
                 <div class="bg-white p-8 rounded-3xl shadow border border-red-100">
                     <h3 class="text-3xl font-semibold mb-4 text-red-700">What if I miss my enrollment window or want to change plans later?</h3>
                     <p class="text-xl text-slate-600">Missing your IEP can mean penalties and gaps. But you have options: Annual Open Enrollment (Oct 15–Dec 7) for changes effective Jan 1; Medicare Advantage Open Enrollment (Jan 1–Mar 31) for switching Advantage plans; or Special Enrollment Periods for life events (e.g., moving, losing coverage). I provide ongoing support for annual reviews and switches.</p>
@@ -317,7 +298,6 @@
             </div>
         </div>
     </section>
-
     <!-- CONTACT -->
     <section id="contact" class="py-24 bg-white">
         <div class="max-w-5xl mx-auto px-6">
@@ -349,35 +329,30 @@
             </div>
         </div>
     </section>
-
     <!-- FOOTER -->
     <footer class="bg-slate-900 text-slate-400 py-16">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <div class="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-8">
                 <img src="https://img1.wsimg.com/isteam/ip/05414050-34ba-49f8-b74d-6ec5a8da0bef/YouFirst-NewLogo.png/:/rs=w:200,h:200,cg:true,m/cr=w:200,h:200/qt=q:100/ll"
                      alt="You First Medicare Logo" class="h-16 w-auto mx-auto md:mx-0">
-
                 <div class="text-center md:text-left text-lg leading-relaxed break-long">
                     Stacia Huyler • Independent Medicare Advisor<br>
                     750 Boston Neck Rd<br>
                     Narragansett, RI 02882<br>
                     (By appointment only)
                 </div>
-
                 <div class="text-sm max-w-md md:max-w-xs lg:max-w-md text-center md:text-right leading-relaxed break-long opacity-90">
-                    I do not offer every plan available in your area. I am licensed and certified to offer you Medicare Advantage(Part C) , Medigap (supplement) & Part D (Drug) Plans in the states of RI, CT, MA, SC & FL with multiple carriers/organizations and their respective plans.
+                    I do not offer every plan available in your area. I am licensed and certified to offer you Medicare Advantage (Part C), Medigap (supplement) & Part D (Drug) Plans in the states of RI, CT, MA, SC & FL with multiple carriers/organizations and their respective plans.
                     Please visit Medicare.gov or call 1-800-MEDICARE for all options.<br><br>
                     © 2026 You First Medicare • Not affiliated with any government agency
                 </div>
             </div>
         </div>
     </footer>
-
     <!-- Floating Call Button (mobile only) -->
     <a href="tel:4018714570" class="fixed bottom-8 right-8 bg-red-600 text-white w-20 h-20 rounded-full flex items-center justify-center text-4xl shadow-2xl hover:scale-110 transition z-50 md:hidden">
         <i class="fas fa-phone"></i>
     </a>
-
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
